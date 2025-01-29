@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        h1{
+            font-family: arial;
+            font-size: 1.2em;
+            color: white;
+        }
+        body{
+            background-color: rgb(118, 118, 219);
+        }
+        P{
+            font-family: arial;
+            color: white;
+            font-size: 1em;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Olá Mundo</h1>
+    <p>Já me livrei da maldição</p>
+    <script>
+       var n1 = Number.parseInt(window.prompt('Digite um número inteiro:'))
+       var n2 = Number.parseInt(window.prompt('Digite outro número'))
+       var s = n1 + n2
+       window.alert('A soma dos valores é ' + s)
+       // o valor poderá ser convertido em string usando o seguinte
+       window.alert('Este é o mesmo valor convertido em string ' + String(s))
+       window.alert(` O numero ${n1} somado ao ${n2} gerou um valor de ${s} `)
+    </script>
+    
+</body>
+</html>
