@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introdução ao DOM</title>
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: rgb(68, 125, 199);
+            color: white;
+            font-size: 1em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
 </head>
 <body>
+    <h1>Iniciando os estudos em DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em javaScript</p>
+    <div>
+        Clique em mim
+    </div>
+    <script>
+        window.document.write(window.document.URL) /*busca a URL da página*/
+       
+        var p1 = window.document.getElementsByTagName('p')[0]
+        window.document.write('Esta escrito isto: ' + p1.innerText) /*mostra o conteudo da tag p e o parâmetro [0] informa que é o primeiro */
+
+        var p1 = window.document.getElementsByTagName('p')[0]
+        p1.style.color = 'red'
+       
+
+    </script>
     
 </body>
 </html>
