@@ -14,6 +14,7 @@ header{
     color: white;
     text-align: center;
     padding: 10px;
+    margin: 20px;
 }
 
 section{
@@ -27,16 +28,33 @@ section{
 }
 
 section > div{
-    background-color: chartreuse;
+    background-color: rgb(20, 101, 121);
+    color: white;
     margin: 5px;
     text-align: center;
-    box-shadow: 5px 5px 4px black;
-    padding: 5px;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.588);
+    border-radius: 5px;
+    padding: 15px;
 }
 
+#verif{
+    background-color: red;
+    color: white;
+    width: 90px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 15px;
+}
+
+#txtano{
+    width: 100px;
+    height: 28px;
+    margin: 5px;
+}
 footer{
     color: white;
     text-align: center;
     font-style: italic;
     padding: 10px;
+    margin: 20px;
 }
