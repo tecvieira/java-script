@@ -22,10 +22,42 @@ function inLista(n, l){
 
 function adicionar(){
     if(isNumero(num.value) && !inLista(num.value, valores)){
-         /* window.alert('Tudo Ok')*/
-       
-
+        valores.push(Number(num.value))
+        let item = document.createElement('option')
+        item.text = `Valor ${num.value} adicionado.`
+        lista.appendChild(item)
+        res.innerHTML = '' //ao adicionar novo valor limpa o finalizar
     }else{
         window.alert('Valor inválido ou já adicionado na lista')
+    }
+    num.value = '' //vai receber vazio no formulário
+    num.focus() // vai apagar o formulário
+}
+
+function finalizar(){
+    if (valores.length == 0) {
+        window.alert('Adicione valores antes de finalizar!')
+    }else{
+        let tot = valores.length
+        let maior = valores[0]
+        let menor = valores[0]
+        let soma = 0
+        let media = 0
+        for(let pos in valores){
+            soma += valores[pos] // vai somar valores adicionados
+            if(valores[pos] > maior) // verifica qual maior valor adicionado
+                maior = valores[pos]
+            if(valores[pos] < menor) // verifica qual menor valor adicionado
+                menor = valores[pos]
+        }
+        media = soma / tot // calcula a média dos valores  
+        res.innerHTML = ''
+        res.innerHTML += `<p>Ao todo, temos ${tot} números cadastrados.</p>`
+        res.innerHTML += `<p>O maior valor informado foi ${maior}.</p>`
+        res.innerHTML += `<p>O menor valor informado foi ${menor}.</p>`
+        res.innerHTML += `<p>A soma de todos os valores adicionados é: ${soma}</p>`
+        res.innerHTML += `<p>A média dos valores adicionados é: ${media}</p>`
+
+
     }
 }

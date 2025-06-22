@@ -29,10 +29,18 @@ section{
     width: 150px;
 }
 
-section > div{
+section > div#dados{
     background-color: chartreuse;
     margin: 5px;
     text-align: center;
+    box-shadow: 5px 5px 4px black;
+    padding: 5px;
+}
+
+section > div#res{
+    background-color: rgb(9, 71, 5);
+    margin: 5px;
+    color: white;
     box-shadow: 5px 5px 4px black;
     padding: 5px;
 }
